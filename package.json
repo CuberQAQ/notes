@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:ui": "cd backend && rm -rf dist && cd ../frontend && npm run build && cp -r dist ../backend",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
+    "deploy:server": "git pull && cd backend && npm i",
+    "start": "cd backend && npm start"
   },
   "author": "CuberQAQ",
   "license": "ISC"
